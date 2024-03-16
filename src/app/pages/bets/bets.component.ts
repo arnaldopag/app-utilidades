@@ -3,11 +3,12 @@ import { MaterialModule } from '../../material.modules';
 import { BetService } from '../../pages/bets/bet.service';
 import { Bet } from '../../models/bet/bet';
 import { BetRequestDTO } from '../../models/bet/bet-request-dto';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-bets',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, CommonModule],
   templateUrl: './bets.component.html',
   styleUrl: './bets.component.css',
 })
@@ -21,9 +22,10 @@ export class BetsComponent implements OnInit {
     this.getAllBets();
   }
 
+  createBet() {}
+
   getAllBets() {
     this.betService.getAllBets().subscribe((bets) => {
-      console.log('Apostas:', bets);
       this.bets = bets;
     });
   }

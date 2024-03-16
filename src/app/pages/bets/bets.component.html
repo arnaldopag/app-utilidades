@@ -1,1 +1,22 @@
-<h1>Bets</h1>
+<div class="add-data-div">
+  <button
+    mat-fab
+    extended
+    aria-label="Example icon button with a plus one icon"
+    (click)="createBet()"
+    class="add-data-button"
+  >
+    <mat-icon>add_circle</mat-icon>
+    Bet
+  </button>
+</div>
+
+<div>
+  <table mat-table>
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+      </ng-container>
+    
+  </table>
+</div>
