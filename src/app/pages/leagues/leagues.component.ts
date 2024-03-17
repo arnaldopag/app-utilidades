@@ -26,10 +26,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-leagues',
   standalone: true,
-  imports: [
-    MaterialModule,
-    CommonModule
-  ],
+  imports: [MaterialModule, CommonModule],
   templateUrl: './leagues.component.html',
   styleUrl: './leagues.component.css',
 })

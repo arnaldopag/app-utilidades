@@ -9,7 +9,6 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LeaguesComponent } from './pages/leagues/leagues.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 import { PlayersComponent } from './pages/players/players.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +24,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LeaguesComponent,
     TeamsComponent,
     PlayersComponent,
-    BrowserAnimationsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

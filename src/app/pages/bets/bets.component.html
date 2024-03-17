@@ -12,11 +12,33 @@
 </div>
 
 <div>
-  <table mat-table>
-    <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef>No.</th>
-        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
-      </ng-container>
-    
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="League" class="mat-elevation-z8 table">
+      <th mat-header-cell *matHeaderCellDef>League</th>
+      <td mat-cell *matCellDef="let bet">{{ bet.league }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Team">
+      <th mat-header-cell *matHeaderCellDef>Team</th>
+      <td mat-cell *matCellDef="let bet">{{ bet.team }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Player">
+      <th mat-header-cell *matHeaderCellDef>Player</th>
+      <td mat-cell *matCellDef="let bet">{{ bet.player }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Odd">
+      <th mat-header-cell *matHeaderCellDef>Odd</th>
+      <td mat-cell *matCellDef="let bet">{{ bet.odd }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let bet">{{ bet.status }}</td>
+    </ng-container>
+    <ng-container matColumnDef="Amount">
+      <th mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let bet">{{ bet.amount }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MaterialModule } from '../../material.modules';
 import { BetService } from '../../pages/bets/bet.service';
 import { Bet } from '../../models/bet/bet';
 import { BetRequestDTO } from '../../models/bet/bet-request-dto';
 import { CommonModule } from '@angular/common';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-bets',
@@ -15,6 +16,17 @@ import { CommonModule } from '@angular/common';
 export class BetsComponent implements OnInit {
   bets: Bet[] = [];
   betRequest!: BetRequestDTO;
+  dataSource = [this.bets];
+
+  displayedColumns: string[] = [
+    'League',
+    'Team',
+    'Player',
+    'Odd',
+    'Status',
+    'Amount',
+  ];
+  @ViewChild(MatTable) table: MatTable<Bet> | undefined;
 
   constructor(private betService: BetService) {}
 
@@ -29,6 +41,7 @@ export class BetsComponent implements OnInit {
       this.bets = bets;
     });
   }
+
   saveBet(data: BetRequestDTO) {
     this.betService.saveBet(data).subscribe((savedBet) => {
       // Lógica para lidar com a aposta salva
