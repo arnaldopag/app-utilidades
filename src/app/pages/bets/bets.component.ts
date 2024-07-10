@@ -34,7 +34,9 @@ export class BetsComponent implements OnInit {
     this.getAllBets();
   }
 
-  createBet() {}
+  createBet() {
+    console.log('Criando aposta:', this.betRequest);
+  }
 
   getAllBets() {
     this.betService.getAllBets().subscribe((bets) => {
@@ -44,9 +46,7 @@ export class BetsComponent implements OnInit {
 
   saveBet(data: BetRequestDTO) {
     this.betService.saveBet(data).subscribe((savedBet) => {
-      // Lógica para lidar com a aposta salva
       console.log('Aposta salva:', savedBet);
-      // Recarrega as apostas após salvar uma nova
       this.getAllBets();
     });
   }
