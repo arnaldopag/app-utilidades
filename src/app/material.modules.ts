@@ -11,6 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule, MatTable } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const materialModules = [
   MatButtonModule,
@@ -26,6 +28,9 @@ const materialModules = [
   MatTableModule,
   MatSortModule,
   MatTable,
+  MatNativeDateModule,
+  FormsModule,
+  ReactiveFormsModule,
 ];
 
 @NgModule({

@@ -1,0 +1,33 @@
+/* Estilo para o título */
+h2[mat-dialog-title] {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px; 
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+
+  div[mat-dialog-actions] {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+  
+  /* Estilo para o botão */
+  button[mat-button] {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px; 
+    color: #fff;
+    background-color: #3f51b5;
+    border: none;
+    padding: 15px 30px; 
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[mat-button]:hover {
+    background-color: #303f9f;
+  }
+  

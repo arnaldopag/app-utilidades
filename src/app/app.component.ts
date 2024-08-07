@@ -9,6 +9,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LeaguesComponent } from './pages/leagues/leagues.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 import { PlayersComponent } from './pages/players/players.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -24,6 +27,8 @@ import { PlayersComponent } from './pages/players/players.component';
     LeaguesComponent,
     TeamsComponent,
     PlayersComponent,
+    MatDialogModule,
+    FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -10,6 +10,4 @@ export class LeagueRequestDTO {
         this.country = data.country;
         this.abbreviation = data.abbreviation;
     }
-  
-  
   }
